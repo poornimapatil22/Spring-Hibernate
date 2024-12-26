@@ -1,4 +1,4 @@
-package com.xworkz.commoun_module.Repository;
+package com.xworkz.commoun_module.repository;
 
 import com.xworkz.commoun_module.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -150,6 +150,7 @@ public class UserRepoImpl  implements UserRepo{
 
     @Override
     public String getNameByEmailAndPassword(String email, String password) {
+
         EntityManager entityManager=emf.createEntityManager();
         EntityTransaction entityTransaction=entityManager.getTransaction();
         String name=null;
@@ -191,8 +192,8 @@ public class UserRepoImpl  implements UserRepo{
 
 
     public boolean saveEmail(String email, String password) {
-        final String username = "lendeshreya@gmail.com";
-        final String userPassword = "bnehxnddhtkaghbj";
+        final String username = "manujabs1176@gmail.com";
+        final String userPassword = "xcogkgdpdyvrcicy";
 
         Properties prop = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");

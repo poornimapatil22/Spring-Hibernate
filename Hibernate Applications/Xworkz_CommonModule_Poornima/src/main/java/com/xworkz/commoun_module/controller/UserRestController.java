@@ -1,9 +1,7 @@
 package com.xworkz.commoun_module.controller;
-import com.xworkz.commoun_module.Service.UserService;
-import com.xworkz.commoun_module.entity.UserEntity;
+import com.xworkz.commoun_module.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

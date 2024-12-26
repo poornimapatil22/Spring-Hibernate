@@ -74,6 +74,7 @@
 </nav>
 
 <div class="container">
+    <div class="msg">${SuccessMsg}</div>
     <div class="msg">${message}</div>
     <h4>Xworkz SignIn</h4>
 

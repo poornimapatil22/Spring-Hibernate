@@ -1,4 +1,4 @@
-package com.xworkz.commoun_module.Repository;
+package com.xworkz.commoun_module.repository;
 
 import com.xworkz.commoun_module.entity.UserEntity;
 

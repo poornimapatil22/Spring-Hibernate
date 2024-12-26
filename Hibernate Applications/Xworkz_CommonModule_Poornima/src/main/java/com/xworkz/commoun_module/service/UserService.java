@@ -1,4 +1,4 @@
-package com.xworkz.commoun_module.Service;
+package com.xworkz.commoun_module.service;
 
 import com.xworkz.commoun_module.dto.UserDto;
 import com.xworkz.commoun_module.entity.UserEntity;

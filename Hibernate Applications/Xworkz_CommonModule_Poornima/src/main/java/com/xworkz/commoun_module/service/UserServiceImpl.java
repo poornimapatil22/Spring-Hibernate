@@ -1,6 +1,6 @@
-package com.xworkz.commoun_module.Service;
+package com.xworkz.commoun_module.service;
 
-import com.xworkz.commoun_module.Repository.UserRepo;
+import com.xworkz.commoun_module.repository.UserRepo;
 import com.xworkz.commoun_module.dto.UserDto;
 import com.xworkz.commoun_module.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
