@@ -13,5 +13,6 @@ public interface UserRepo {
     Long countByEmail(String email);
     UserEntity getUserByEmail(String email);
     public boolean saveEmail(String email, String password);
+    public UserEntity updateUserEntity(String email,String name, String location, Long altPhone, Long phone, String altEmail);
 
 }

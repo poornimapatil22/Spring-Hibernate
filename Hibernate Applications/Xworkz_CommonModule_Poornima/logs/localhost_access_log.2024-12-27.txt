@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:39 -0500] "GET /Xworkz_CommonModule_Poornima HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:41 -0500] "GET /Xworkz_CommonModule_Poornima/ HTTP/1.1" 200 1924
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:44 -0500] "GET /Xworkz_CommonModule_Poornima/SignUp.jsp HTTP/1.1" 200 10653
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:48 -0500] "GET /Xworkz_CommonModule_Poornima/name/p HTTP/1.1" 200 27
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:53 -0500] "GET /Xworkz_CommonModule_Poornima/phone1/9353726789 HTTP/1.1" 200 6
+0:0:0:0:0:0:0:1 - - [27/Dec/2024:01:23:57 -0500] "GET /Xworkz_CommonModule_Poornima/altPhone1/6787878787 HTTP/1.1" 200 6

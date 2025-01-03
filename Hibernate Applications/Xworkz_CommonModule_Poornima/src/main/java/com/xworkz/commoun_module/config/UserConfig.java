@@ -50,6 +50,11 @@ public class UserConfig {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public ViewResolver viewResolver() {
+        return new InternalResourceViewResolver("/",".jsp");
+    }
+
 
 
 }

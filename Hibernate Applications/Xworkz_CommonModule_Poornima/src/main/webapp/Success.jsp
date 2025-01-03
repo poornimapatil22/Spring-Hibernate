@@ -58,6 +58,7 @@ ${message}
     <div class="container">
         <h1>User successfully signed In!</h1>
         <a href="index.jsp" class="btn">Go to Home</a>
+        <a href="updateAgain" class="btn">Update Your Profile Here!</a>
     </div>
 </body>
 

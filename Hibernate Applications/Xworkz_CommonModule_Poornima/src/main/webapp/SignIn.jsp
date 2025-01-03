@@ -75,7 +75,9 @@
 
 <div class="container">
     <div class="msg">${SuccessMsg}</div>
+    <div class="msg">${error}</div>
     <div class="msg">${message}</div>
+
     <h4>Xworkz SignIn</h4>
 
     <form action="signIn" method="post">

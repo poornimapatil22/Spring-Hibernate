@@ -6,10 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.Properties;
 
 @Repository
@@ -192,7 +189,7 @@ public class UserRepoImpl  implements UserRepo{
 
 
     public boolean saveEmail(String email, String password) {
-        final String username = "manujabs1176@gmail.com";
+        final String username = "";
         final String userPassword = "xcogkgdpdyvrcicy";
 
         Properties prop = new Properties();
@@ -225,6 +222,48 @@ public class UserRepoImpl  implements UserRepo{
         }
     }
 
+    @Override
+    public UserEntity updateUserEntity(String email, String name, String location, Long altPhone, Long phone, String altEmail) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction entityTransaction = em.getTransaction();
+        UserEntity userEntity = null;
+
+        try {
+            entityTransaction.begin();
+
+            // Execute the update query
+            Query query = em.createNamedQuery("updateUserEntity");
+            query.setParameter("email", email);
+            query.setParameter("name", name);
+            query.setParameter("location", location);
+            query.setParameter("altPhone", altPhone);
+            query.setParameter("phone", phone);
+            query.setParameter("altEmail", altEmail);
+
+            // Execute the update and get the number of updated rows
+            int rowsUpdated = query.executeUpdate();
+
+            // If update is successful, retrieve the updated user using email
+            if (rowsUpdated > 0) {
+                // Use a query to fetch the updated user based on email (instead of find)
+                TypedQuery<UserEntity> userQuery = em.createQuery(
+                        "SELECT u FROM UserEntity u WHERE u.email = :email", UserEntity.class);
+                userQuery.setParameter("email", email);
+                userEntity = userQuery.getSingleResult();
+            }
+
+            entityTransaction.commit();
+        } catch (Exception e) {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+
+        return userEntity;
+    }
 
 
 

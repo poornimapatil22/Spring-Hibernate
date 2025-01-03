@@ -1,17 +1,21 @@
 package com.xworkz.commoun_module.service;
 
+import com.xworkz.commoun_module.entity.AbstractAuditEntity;
 import com.xworkz.commoun_module.repository.UserRepo;
 import com.xworkz.commoun_module.dto.UserDto;
 import com.xworkz.commoun_module.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Random;
 
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepo userRepo;
+
+   // AbstractAuditEntity auditEntity=new AbstractAuditEntity();
 
     @Override
     public boolean validAndSave(UserDto userDto) {
@@ -29,6 +33,12 @@ public class UserServiceImpl implements UserService{
         userEntity.setAltPhone(userDto.getAltPhone());
         userEntity.setLocation(userDto.getLocation());
         userEntity.setCount(-1);
+        userEntity.setFailedAttempts(0);
+        userEntity.setLocked(false);
+        userEntity.setCreatedBy(userDto.getName());
+        userEntity.setUpdateBy(userDto.getName());
+        userEntity.getCreatedOn();
+        userEntity.getUpdatedOn();
         this.userRepo.save(userEntity);
         this.userRepo.saveEmail(userDto.getEmail(),password);
 
@@ -86,10 +96,18 @@ public class UserServiceImpl implements UserService{
 
     }
 
+    @Override
+    public UserEntity updateUserEntity(String email,String name, String location, Long altPhone, Long phone, String altEmail) {
+        return userRepo.updateUserEntity(email, name, location, altPhone, phone, altEmail);
+    }
+
 
     private static Random random=new Random();
     public static String randomNumGenerator(){
        int i= random.nextInt(999999);
         return String.valueOf(i)  ;
     }
+
+
+
 }

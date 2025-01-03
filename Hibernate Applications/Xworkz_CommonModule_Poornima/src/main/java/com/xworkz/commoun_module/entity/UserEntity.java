@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import javax.persistence.*;
 @Entity
+@NamedQuery(name="updateUserEntity",query = "UPDATE UserEntity u SET u.name = :name, u.location = :location, u.altPhone = :altPhone, u.phone = :phone, u.altEmail = :altEmail WHERE u.email = :email")
 @NamedQuery(name="getUserByEmail",query="select u FROM UserEntity u WHERE u.email=:email")
 @NamedQuery(name="getNameByEmailAndPassword" ,query="select e.name from UserEntity e where e.email = :byemail and e.password = :bypassword ")
 @NamedQuery(name="countName" , query ="select count(*) from UserEntity e where e.name =:SetName")
@@ -19,7 +20,7 @@ import javax.persistence.*;
 @Data
 @RequiredArgsConstructor
 
-public class UserEntity {
+public class UserEntity extends AbstractAuditEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -31,6 +32,8 @@ public class UserEntity {
     private long phone;
     private String altEmail;
     private Integer count ;
+    private Integer failedAttempts = 0;
+    private Boolean locked = false;
 }
 
 

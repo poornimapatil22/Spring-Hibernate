@@ -90,8 +90,6 @@
       <artifactId>hibernate-validator</artifactId>
       <version>6.0.13.Final</version>
     </dependency>
-
-
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
@@ -100,6 +98,6 @@
 
   </dependencies>
   <build>
-    <finalName>Xworkz_CommounModule_name</finalName>
+    <finalName>Xworkz_CommonModule_name</finalName>
   </build>
 </project>

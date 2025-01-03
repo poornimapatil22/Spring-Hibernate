@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:21:08 -0500] "GET /Xworkz_CommonModule_Poornima HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:21:11 -0500] "GET /Xworkz_CommonModule_Poornima/ HTTP/1.1" 200 1924
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:21:11 -0500] "GET /favicon.ico HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:21:15 -0500] "GET /Xworkz_CommonModule_Poornima/SignUp.jsp HTTP/1.1" 200 7681
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:30:31 -0500] "GET /Xworkz_CommonModule_Poornima HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:30:33 -0500] "GET /Xworkz_CommonModule_Poornima/ HTTP/1.1" 200 1924
+0:0:0:0:0:0:0:1 - - [28/Dec/2024:12:30:36 -0500] "GET /Xworkz_CommonModule_Poornima/SignUp.jsp HTTP/1.1" 200 10384

@@ -58,8 +58,9 @@
             <img src="https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png" alt="Xworkz Logo">
         </a>
         <div class="navbar-nav ml-auto">
-            <a class="nav-link" href="SignUp.jsp">SignUp</a>
+            <a class="nav-link" href="SignUp.jsp" >SignUp</a>
             <a class="nav-link" href="SignIn.jsp">SignIn</a>
+             <a class="nav-link" href="signUpAgain">SignUpAgain</a>
         </div>
     </nav>
 
