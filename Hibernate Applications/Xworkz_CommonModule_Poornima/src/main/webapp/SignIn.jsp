@@ -35,6 +35,11 @@
             text-align: center;
             margin-bottom: 10px;
         }
+        .msgs {
+                    color: green;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
         .button-container {
             display: flex;
             justify-content: center;
@@ -76,7 +81,9 @@
 <div class="container">
     <div class="msg">${SuccessMsg}</div>
     <div class="msg">${error}</div>
-    <div class="msg">${message}</div>
+    <div class="msg">${lock}</div>
+     <div class="msg">${say}</div>
+    <div class="msgs">${message}</div>
 
     <h4>Xworkz SignIn</h4>
 

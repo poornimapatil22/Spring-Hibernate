@@ -133,7 +133,7 @@
     <select id="location" name="location" class="form-control">
                    <option value=""> select the option</option>
                    <c:forEach items="${locationListSend}" var="location">
-                   <option value="${location}"> ${location}</option>
+                   <option value="${location}" ${location == user.location ? 'selected' : ''}> ${location}</option>
                    </c:forEach>
                    </select>
                    </div>

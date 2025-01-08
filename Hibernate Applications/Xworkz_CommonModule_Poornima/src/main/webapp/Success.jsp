@@ -61,5 +61,4 @@ ${message}
         <a href="updateAgain" class="btn">Update Your Profile Here!</a>
     </div>
 </body>
-
 </html>

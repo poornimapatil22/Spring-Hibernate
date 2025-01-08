@@ -9,6 +9,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -21,6 +22,7 @@ import javax.sql.DataSource;
 @Slf4j
 
 public class UserConfig {
+    int sizeOfImg=5*1024*1024;
     public UserConfig(){
         log.info("const of config");
     }
@@ -55,6 +57,13 @@ public class UserConfig {
         return new InternalResourceViewResolver("/",".jsp");
     }
 
+    @Bean(name="multipartResolver")
+    public CommonsMultipartResolver multipartResolver(){
+        CommonsMultipartResolver commonsMultipartResolver=new CommonsMultipartResolver();
+        commonsMultipartResolver.setMaxUploadSize(sizeOfImg);
+        commonsMultipartResolver.setMaxInMemorySize(sizeOfImg);
+        return commonsMultipartResolver;
+    }
 
 
 }

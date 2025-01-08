@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import javax.persistence.*;
+import java.time.LocalDateTime;
+
 @Entity
 @NamedQuery(name="updateUserEntity",query = "UPDATE UserEntity u SET u.name = :name, u.location = :location, u.altPhone = :altPhone, u.phone = :phone, u.altEmail = :altEmail WHERE u.email = :email")
 @NamedQuery(name="getUserByEmail",query="select u FROM UserEntity u WHERE u.email=:email")
@@ -34,6 +36,8 @@ public class UserEntity extends AbstractAuditEntity{
     private Integer count ;
     private Integer failedAttempts = 0;
     private Boolean locked = false;
+    private String imagePath;
+    private LocalDateTime lockTime;
 }
 
 

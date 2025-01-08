@@ -1,0 +1,34 @@
+05-Jan-2025 23:44:59.504 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.38
+05-Jan-2025 23:44:59.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 10 2020 08:20:30 UTC
+05-Jan-2025 23:44:59.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.38.0
+05-Jan-2025 23:44:59.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+05-Jan-2025 23:44:59.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+05-Jan-2025 23:44:59.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Jan-2025 23:44:59.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_261\jre
+05-Jan-2025 23:44:59.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_261-b12
+05-Jan-2025 23:44:59.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+05-Jan-2025 23:44:59.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima
+05-Jan-2025 23:44:59.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\ASUS\Downloads\apache-tomcat-9.0.38-windows-x64\apache-tomcat-9.0.38
+05-Jan-2025 23:44:59.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\ASUS\Downloads\apache-tomcat-9.0.38-windows-x64\apache-tomcat-9.0.38
+05-Jan-2025 23:44:59.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima
+05-Jan-2025 23:44:59.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\temp
+05-Jan-2025 23:44:59.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\conf\logging.properties
+05-Jan-2025 23:44:59.526 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Jan-2025 23:44:59.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\lib\idea_rt.jar=57835:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin
+05-Jan-2025 23:44:59.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+05-Jan-2025 23:44:59.539 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+05-Jan-2025 23:44:59.539 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+05-Jan-2025 23:44:59.540 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+05-Jan-2025 23:44:59.568 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+05-Jan-2025 23:45:00.580 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9999"]
+05-Jan-2025 23:45:00.922 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1944] milliseconds
+05-Jan-2025 23:45:00.991 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Jan-2025 23:45:00.991 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.38]
+05-Jan-2025 23:45:01.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\conf\Catalina\localhost\IndianRailways.xml]
+05-Jan-2025 23:45:01.739 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Jan-2025 23:45:01.828 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\conf\Catalina\localhost\IndianRailways.xml] has finished in [813] ms
+05-Jan-2025 23:45:01.829 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\conf\Catalina\localhost\Xworkz_CommonModule_Poornima.xml]
+05-Jan-2025 23:45:09.997 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Jan-2025 23:45:26.604 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\ASUS\Desktop\Spring-Hibernate\Hibernate Applications\Xworkz_CommonModule_Poornima\conf\Catalina\localhost\Xworkz_CommonModule_Poornima.xml] has finished in [24,776] ms
+05-Jan-2025 23:45:26.613 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9999"]
+05-Jan-2025 23:45:26.630 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [25707] milliseconds

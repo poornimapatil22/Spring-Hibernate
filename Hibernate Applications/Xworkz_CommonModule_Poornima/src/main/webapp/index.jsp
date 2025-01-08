@@ -55,13 +55,12 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
         <a class="navbar-brand" href="https://x-workz.in/">
-            <img src="https://x-workz.in/static/media/Logo.cf195593dc1b3f921369.png" alt="Xworkz Logo">
+            <img src="" alt="Xworkz Logo">
         </a>
         <div class="navbar-nav ml-auto">
-            <a class="nav-link" href="SignUp.jsp" >SignUp</a>
+            <a class="nav-link" href="signUpAgain" >SignUp</a>
             <a class="nav-link" href="SignIn.jsp">SignIn</a>
-             <a class="nav-link" href="signUpAgain">SignUpAgain</a>
-        </div>
+            </div>
     </nav>
 
     <div class="container">

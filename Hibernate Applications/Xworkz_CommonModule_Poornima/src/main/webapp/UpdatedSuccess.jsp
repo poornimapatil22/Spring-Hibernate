@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="alert alert-success" role="alert">
-       You have updated your profile successfully!!
+       ${message}
     </div>
+
 </body>
 </html>
