@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@NamedQuery(name="forgotPassword",query = "UPDATE UserEntity u SET u.password=:password WHERE u.email = :email")
 @NamedQuery(name="updateUserEntity",query = "UPDATE UserEntity u SET u.name = :name, u.location = :location, u.altPhone = :altPhone, u.phone = :phone, u.altEmail = :altEmail WHERE u.email = :email")
 @NamedQuery(name="getUserByEmail",query="select u FROM UserEntity u WHERE u.email=:email")
 @NamedQuery(name="getNameByEmailAndPassword" ,query="select e.name from UserEntity e where e.email = :byemail and e.password = :bypassword ")

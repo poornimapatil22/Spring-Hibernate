@@ -142,7 +142,7 @@ public class UserController {
         if (!storedPassword.equals(password)) {
             userEntity.setFailedAttempts(userEntity.getFailedAttempts() + 1);
 
-            if (userEntity.getFailedAttempts() > 3) {
+            if (userEntity.getFailedAttempts() > 3){
                 userEntity.setLocked(true);
                 userEntity.setLockTime(LocalDateTime.now());
                 userRepo.save(userEntity);
@@ -186,6 +186,20 @@ public class UserController {
 
             return "SignUp";
         }
+    }
+
+    @PostMapping("/forgotPassword")
+    public String forgotPassword(@RequestParam String newPassword, @RequestParam String email, Model model ,String confirmPassword) {
+        String updatePassword = userService.forgotPassword(email, newPassword);
+
+        if (updatePassword != null && newPassword.equals(confirmPassword)) {
+            model.addAttribute("forgotPasswordSuccess", "You Have Successfully changed Your Password");
+            model.addAttribute("email", email);
+            return "ForgotPasswordSuccess";  // Success view
+        }
+
+        model.addAttribute("ForgotError", "Something went wrong, try again!");
+        return "ForgotPassword";  // Failure view
     }
 
 

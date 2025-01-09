@@ -101,6 +101,11 @@ public class UserServiceImpl implements UserService{
         return userRepo.updateUserEntity(email, name, location, altPhone, phone, altEmail);
     }
 
+    @Override
+    public String forgotPassword(String email, String password) {
+        return userRepo.forgotPassword(email,password);
+    }
+
 
     private static Random random=new Random();
     public static String randomNumGenerator(){

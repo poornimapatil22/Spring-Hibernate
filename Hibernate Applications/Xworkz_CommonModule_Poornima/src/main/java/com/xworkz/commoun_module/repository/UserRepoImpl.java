@@ -222,6 +222,8 @@ public class UserRepoImpl  implements UserRepo{
         }
     }
 
+
+
     @Override
     public UserEntity updateUserEntity(String email, String name, String location, Long altPhone, Long phone, String altEmail) {
         EntityManager em = emf.createEntityManager();
@@ -240,6 +242,7 @@ public class UserRepoImpl  implements UserRepo{
             query.setParameter("phone", phone);
             query.setParameter("altEmail", altEmail);
 
+
             // Execute the update and get the number of updated rows
             int rowsUpdated = query.executeUpdate();
 
@@ -250,6 +253,7 @@ public class UserRepoImpl  implements UserRepo{
                         "SELECT u FROM UserEntity u WHERE u.email = :email", UserEntity.class);
                 userQuery.setParameter("email", email);
                 userEntity = userQuery.getSingleResult();
+               // userEntity = em.find(UserEntity.class, email);
             }
 
             entityTransaction.commit();
@@ -263,6 +267,39 @@ public class UserRepoImpl  implements UserRepo{
         }
 
         return userEntity;
+    }
+
+    @Override
+    public String forgotPassword(String email, String password) {
+        EntityManager entityManager = emf.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        try {
+            entityTransaction.begin();
+
+            // Using a named query to update password based on email
+            Query query = entityManager.createNamedQuery("forgotPassword");
+            query.setParameter("email", email);
+            query.setParameter("password", password);
+
+            int rowsUpdated = query.executeUpdate();  // This executes the update query
+
+            if (rowsUpdated > 0) {
+                entityTransaction.commit();  // Commit transaction if rows are updated
+                return email;  // Return email to indicate success
+            } else {
+                entityTransaction.rollback();  // Rollback if no rows were updated
+                return null;  // Indicate failure
+            }
+
+        } catch (Exception e) {
+            if (entityTransaction.isActive()) {
+                entityTransaction.rollback();  // Rollback on exception
+            }
+            e.printStackTrace();
+            return null;  // Indicate failure
+        } finally {
+            entityManager.close();  // Close the entity manager
+        }
     }
 
 

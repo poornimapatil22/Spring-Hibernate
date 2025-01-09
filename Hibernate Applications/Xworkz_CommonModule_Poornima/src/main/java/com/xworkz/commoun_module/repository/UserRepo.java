@@ -14,5 +14,5 @@ public interface UserRepo {
     UserEntity getUserByEmail(String email);
     public boolean saveEmail(String email, String password);
     public UserEntity updateUserEntity(String email,String name, String location, Long altPhone, Long phone, String altEmail);
-
+    public String forgotPassword(String email,String password);
 }
